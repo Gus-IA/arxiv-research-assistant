@@ -1,5 +1,5 @@
 import os
-
+import re
 from dotenv import load_dotenv
 from groq import Groq
 
@@ -19,6 +19,16 @@ SYSTEM_PROMPT = (
     "say so clearly."
 )
 
+MIN_RERANK_SCORE = -5.0  # removes obvious noise; calibrate again in the evaluation
+
+
+def cited_numbers(answer):
+    """Return the excerpt numbers cited in the answer, e.g. [1], [2][3] or [1, 2]."""
+    numbers = set()
+    for group in re.findall(r"\[([\d,\s]+)\]", answer):
+        numbers.update(int(n) for n in re.findall(r"\d+", group))
+    return numbers
+
 
 def build_context(chunks):
     """Number each excerpt so the model can cite it."""
@@ -29,15 +39,19 @@ def build_context(chunks):
 
 
 def ask(question, top_k=5, category=None, date_from=None):
-    """Retrieve the best chunks, then ask the LLM to answer using only them."""
+    """Retrieve the best chunks, answer using only them, return only the cited sources."""
     chunks = search_and_rerank(
         question, top_k=top_k, category=category, date_from=date_from
     )
+    chunks = [c for c in chunks if c["rerank_score"] >= MIN_RERANK_SCORE]
     if not chunks:
         return "No relevant excerpts were found for this question.", []
 
-    user_prompt = f"Excerpts:\n{build_context(chunks)}\n\nQuestion: {question}"
+    # Same numbering as in the prompt, so [n] in the answer maps to chunk n
+    for i, c in enumerate(chunks, start=1):
+        c["n"] = i
 
+    user_prompt = f"Excerpts:\n{build_context(chunks)}\n\nQuestion: {question}"
     response = client.chat.completions.create(
         model=os.getenv("LLM_MODEL", "openai/gpt-oss-20b"),
         messages=[
@@ -49,10 +63,11 @@ def ask(question, top_k=5, category=None, date_from=None):
     )
     choice = response.choices[0]
     answer = choice.message.content
-    # finish_reason == tokens máximos
     if choice.finish_reason == "length":
         answer += "\n\n[Answer truncated: increase max_tokens]"
-    return answer, chunks
+
+    cited = cited_numbers(answer)
+    return answer, [c for c in chunks if c["n"] in cited]
 
 
 if __name__ == "__main__":
