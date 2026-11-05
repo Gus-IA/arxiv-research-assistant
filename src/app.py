@@ -3,6 +3,8 @@ import sys
 from datetime import date, timedelta
 
 import streamlit as st
+from llm import ask, DEFAULT_METHOD
+from retrieval import RETRIEVAL_METHODS
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from llm import ask
@@ -39,6 +41,11 @@ st.caption("Ask about recent papers. Answers cite the excerpts they come from.")
 with st.sidebar:
     st.header("Filters")
     category_label = st.selectbox("Category", list(CATEGORIES))
+    method = st.selectbox(
+        "Retrieval method",
+        RETRIEVAL_METHODS,
+        index=RETRIEVAL_METHODS.index(DEFAULT_METHOD),
+    )
     use_date = st.checkbox("Only papers since a date")
     date_from = (
         st.date_input("Published since", value=date.today() - timedelta(days=30))
@@ -69,6 +76,7 @@ if question := st.chat_input("Ask about the papers..."):
                 top_k=top_k,
                 category=CATEGORIES[category_label],
                 date_from=date_from,
+                method=method,
             )
         papers = group_sources(chunks)
         st.markdown(answer)

@@ -2,6 +2,7 @@ import os
 import re
 from dotenv import load_dotenv
 from groq import Groq
+from retrieval import retrieve
 
 from retrieval import search_and_rerank
 
@@ -20,6 +21,7 @@ SYSTEM_PROMPT = (
 )
 
 MIN_RERANK_SCORE = -5.0  # removes obvious noise; calibrate again in the evaluation
+DEFAULT_METHOD = "hybrid"  # best trade-off in the retrieval evaluation
 
 
 def cited_numbers(answer):
@@ -38,14 +40,18 @@ def build_context(chunks):
     return "\n\n".join(parts)
 
 
-def ask(question, top_k=5, category=None, date_from=None):
+def ask(question, top_k=5, category=None, date_from=None, method=DEFAULT_METHOD):
     """Retrieve the best chunks, answer using only them, return only the cited sources."""
-    chunks = search_and_rerank(
-        question, top_k=top_k, category=category, date_from=date_from
+    chunks = retrieve(
+        question, method=method, top_k=top_k, category=category, date_from=date_from
     )
-    chunks = [c for c in chunks if c["rerank_score"] >= MIN_RERANK_SCORE]
+    # The score threshold only applies to the re-ranker; other methods have no such score
+    chunks = [
+        c for c in chunks if c.get("rerank_score", MIN_RERANK_SCORE) >= MIN_RERANK_SCORE
+    ]
     if not chunks:
         return "No relevant excerpts were found for this question.", []
+    # ... the rest of the function stays exactly the same
 
     # Same numbering as in the prompt, so [n] in the answer maps to chunk n
     for i, c in enumerate(chunks, start=1):

@@ -100,6 +100,20 @@ def search_and_rerank(query, top_k=5, candidates=20, category=None, date_from=No
     return sorted(results, key=lambda r: r["rerank_score"], reverse=True)[:top_k]
 
 
+RETRIEVAL_METHODS = ["hybrid", "hybrid + rerank", "keyword", "vector"]
+
+
+def retrieve(query, method="hybrid", top_k=5, category=None, date_from=None):
+    """Run the chosen retrieval strategy."""
+    if method == "vector":
+        return vector_search(query, top_k, category, date_from)
+    if method == "keyword":
+        return keyword_search(query, top_k, category, date_from)
+    if method == "hybrid + rerank":
+        return search_and_rerank(query, top_k, category=category, date_from=date_from)
+    return hybrid_search(query, top_k, category, date_from)
+
+
 if __name__ == "__main__":
     query = "How do robots learn manipulation from demonstrations?"
     for name, fn in [
