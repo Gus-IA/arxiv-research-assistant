@@ -35,7 +35,7 @@ def render_sources(papers):
 
 
 st.set_page_config(page_title="arXiv Research Assistant", page_icon="📚", layout="wide")
-st.title("📚 arXiv Research Assitant")
+st.title("📚 arXiv Research Assistant")
 st.caption("Ask about recent papers. Answers cite the excerpts they come from.")
 
 with st.sidebar:
