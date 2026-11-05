@@ -1,0 +1,257 @@
+[
+  {
+    "arxiv_id": "2610.40356v1",
+    "chunk_id": 1399,
+    "question": "What limits the number of demonstrations that current in‑context imitation learning policies can use?"
+  },
+  {
+    "arxiv_id": "2610.40370v1",
+    "chunk_id": 1236,
+    "question": "What conditions must be met for refinement and merging to be allowed in the registry protocol?"
+  },
+  {
+    "arxiv_id": "2610.40373v1",
+    "chunk_id": 1158,
+    "question": "How are the short‑term, milestone, and goal prediction targets defined for each timestep t?"
+  },
+  {
+    "arxiv_id": "2610.40385v1",
+    "chunk_id": 1108,
+    "question": "Which components are identified as the true chokepoints in the robotics supply chain that need targeted incentives?"
+  },
+  {
+    "arxiv_id": "2610.40401v1",
+    "chunk_id": 1061,
+    "question": "What percentage reduction in position jerk RMS and rotation jerk RMS is achieved by continuous action function reconstruction compared to LaW AM during the first second of execution?"
+  },
+  {
+    "arxiv_id": "2610.40427v1",
+    "chunk_id": 1000,
+    "question": "What is the form of the augmented Lagrangian after introducing the scaled dual variable \\(u=y/\\rho\\) and setting \\(E=-I\\)?"
+  },
+  {
+    "arxiv_id": "2610.40429v1",
+    "chunk_id": 938,
+    "question": "What method uses cellular towers as localization landmarks to plan paths for robots in GPS‑den"
+  },
+  {
+    "arxiv_id": "2610.40430v1",
+    "chunk_id": 916,
+    "question": "How many clean instruction episodes and how many perception episodes does SR pool per scene?"
+  },
+  {
+    "arxiv_id": "2610.40431v1",
+    "chunk_id": 833,
+    "question": "What constraints are imposed on the assignment matrix \\(X\\) in the linear assignment problem to ensure that each station is assigned at most one path and each path is assigned to at most one station?"
+  },
+  {
+    "arxiv_id": "2610.40473v1",
+    "chunk_id": 750,
+    "question": "Where does the maximum nearest‑sample distance occur in the planar experiments, and how is it approximated?"
+  },
+  {
+    "arxiv_id": "2610.40483v1",
+    "chunk_id": 4208,
+    "question": "What condition on the weight update ΔW across all trainable layers ensures that the inner product ⟨g_Fi, Δθ⟩ equals zero, thereby keeping the drift unchanged to first order?"
+  },
+  {
+    "arxiv_id": "2610.40485v1",
+    "chunk_id": 4143,
+    "question": "What average shift in detection lag is observed between the aggregate metric rel‑dM and the rarest‑direction metric |ΔM VV|/|M* VV| across held‑out configurations with D ≥ 4?"
+  },
+  {
+    "arxiv_id": "2610.40488v1",
+    "chunk_id": 5594,
+    "question": "How accurately do the models forecast the outcomes of the five minimum‑viable experiments they propose for a given seed paper?"
+  },
+  {
+    "arxiv_id": "2610.40490v1",
+    "chunk_id": 4069,
+    "question": "How does the block‑level logical error rate ratio change as the mismatch strength σ_r increases for the LP20 and Kasai codes?"
+  },
+  {
+    "arxiv_id": "2610.40492v1",
+    "chunk_id": 5469,
+    "question": "How can a learning system adjust the content and sequencing of subsequent activities based on accumulating learning evidence?"
+  },
+  {
+    "arxiv_id": "2610.40499v1",
+    "chunk_id": 3888,
+    "question": "How can the gradient of the objective be expressed without evaluating the computationally expensive reflected transition densities?"
+  },
+  {
+    "arxiv_id": "2610.40502v1",
+    "chunk_id": 689,
+    "question": "What condition on the quasi‑static contact margin \\(m_{\\text{qs}}^c(u)\\) guarantees that the unilateral contact, lateral sticking, and positive loading of both wheels are satisfied at \\(R^*\\)?"
+  },
+  {
+    "arxiv_id": "2610.40505v1",
+    "chunk_id": 3794,
+    "question": "Does strong probing of internal representations always translate into effective steering of model outputs in Qwen3‑TTS?"
+  },
+  {
+    "arxiv_id": "2610.40511v1",
+    "chunk_id": 5401,
+    "question": "How quickly does neural prediction accuracy recover as the bottleneck rank increases in the reduced‑rank ridge regression model?"
+  },
+  {
+    "arxiv_id": "2610.40518v1",
+    "chunk_id": 5349,
+    "question": "What chunk size (δ) is used for sentence‑safe chunking during the corpus extraction step?"
+  },
+  {
+    "arxiv_id": "2610.40528v1",
+    "chunk_id": 3254,
+    "question": "Why does the Barnes–Hut algorithm not conserve momentum exactly?"
+  },
+  {
+    "arxiv_id": "2610.40364v1",
+    "chunk_id": 1337,
+    "question": "Which method is found most often in a top group when no budget is available to compare methods on a new robot?"
+  },
+  {
+    "arxiv_id": "2610.40516v1",
+    "chunk_id": 3515,
+    "question": "Do Olmo and the Apertus models break more often after translation than they do in English‑only evaluation?"
+  },
+  {
+    "arxiv_id": "2610.40533v1",
+    "chunk_id": 3096,
+    "question": "What are the numbers of items and groups for each of the four tasks, and what share of groups is required to achieve power 0.8 under Holm’s correction?"
+  },
+  {
+    "arxiv_id": "2610.40536v1",
+    "chunk_id": 2868,
+    "question": "What sensitivity does the model achieve for heart‑failure prediction at a 95 % specificity threshold?"
+  },
+  {
+    "arxiv_id": "2610.40537v1",
+    "chunk_id": 558,
+    "question": "What is the alignment metric achieved when training with 199 expert demonstrations?"
+  },
+  {
+    "arxiv_id": "2610.40541v1",
+    "chunk_id": 5302,
+    "question": "Why does the test set contain only 300 prompts?"
+  },
+  {
+    "arxiv_id": "2610.40544v1",
+    "chunk_id": 2807,
+    "question": "Which machine‑learning algorithm achieved particularly good fraud detection performance for structuring smurfing behavior in mobile money transactions?"
+  },
+  {
+    "arxiv_id": "2610.40551v1",
+    "chunk_id": 5230,
+    "question": "What is the agreement percentage between human evaluations and Claude Opus 5 for CAS/Lean code submissions when using the evaluation pipeline?"
+  },
+  {
+    "arxiv_id": "2610.40559v1",
+    "chunk_id": 423,
+    "question": "What condition causes the algorithm to skip Jacobian updates when the commanded step size is too small?"
+  },
+  {
+    "arxiv_id": "2610.40563v1",
+    "chunk_id": 5191,
+    "question": "How does the prevalence of the Analysis/Clarification – Reflection (factual) pattern change over the course of Human‑Human versus Human‑LLM counseling sessions?"
+  },
+  {
+    "arxiv_id": "2610.40565v1",
+    "chunk_id": 213,
+    "question": "How can a frontier model with privileged state teach a student model without privileged state, even through verbal hints?"
+  },
+  {
+    "arxiv_id": "2610.40574v1",
+    "chunk_id": 5102,
+    "question": "What problem arises when a teacher is given highly informative references in dense token‑level learning approaches, and how is this issue mitigated by adjusting the amount of reference exposure?"
+  },
+  {
+    "arxiv_id": "2610.40576v1",
+    "chunk_id": 5030,
+    "question": "What challenge arises when teacher‑generated trajectories differ substantially from a student’s own rollout distribution?"
+  },
+  {
+    "arxiv_id": "2610.40577v1",
+    "chunk_id": 4954,
+    "question": "How are the mixture proportions \\(a_{m,i}\\) for each selected expert computed in the view‑mixing step?"
+  },
+  {
+    "arxiv_id": "2610.40578v1",
+    "chunk_id": 4870,
+    "question": "What effect does adding code‑based state checks to GUI inspection have on VeriCUA’s decision rate, recall, and false positives?"
+  },
+  {
+    "arxiv_id": "2610.40586v1",
+    "chunk_id": 2546,
+    "question": "What is the normalized success rate of DLCS‑2 when Nc = 20, αc = 1, σf,c = 10 Hz, Ntrain = 500, and Nepoch = 5000?"
+  },
+  {
+    "arxiv_id": "2610.40600v1",
+    "chunk_id": 172,
+    "question": "What is the maximum belt speed and the resulting travel time for the robot when the conveyor belt is actuated at that speed?"
+  },
+  {
+    "arxiv_id": "2610.40611v1",
+    "chunk_id": 4737,
+    "question": "Which factor is shown to drive hint quality more than generator scale or retrieval?"
+  },
+  {
+    "arxiv_id": "2610.40613v1",
+    "chunk_id": 4621,
+    "question": "What does the parameter ρ control in the sampling procedure?"
+  },
+  {
+    "arxiv_id": "2610.40616v1",
+    "chunk_id": 2451,
+    "question": "What is the optimal timestep for PIA after shadow‑model tuning, and how does it differ from the official default of oft = 500?"
+  },
+  {
+    "arxiv_id": "2610.40618v1",
+    "chunk_id": 2223,
+    "question": "How can the randomness introduced by auxiliary exponential variables in a CTMC simulation be replaced with deterministic continuous evolution while preserving the one‑time marginals of the reverse process?"
+  },
+  {
+    "arxiv_id": "2610.40627v1",
+    "chunk_id": 4452,
+    "question": "Which method attains the highest average safe rate on both backbones and leads every individual safety column?"
+  },
+  {
+    "arxiv_id": "2610.40632v1",
+    "chunk_id": 91,
+    "question": "What is the mean average precision achieved by the proposed method on the EGTEA Gaze+ dataset for the rare action split?"
+  },
+  {
+    "arxiv_id": "2610.40637v1",
+    "chunk_id": 2131,
+    "question": "Under what conditions does the learned latent dynamics model accurately reflect the true system dynamics?"
+  },
+  {
+    "arxiv_id": "2610.40644v1",
+    "chunk_id": 2036,
+    "question": "When does the fitted proposal provide the greatest benefit compared to resampling?"
+  },
+  {
+    "arxiv_id": "2610.40646v1",
+    "chunk_id": 14,
+    "question": "What purpose does the soft silicone serve in the end‑effector design?"
+  },
+  {
+    "arxiv_id": "2610.40647v1",
+    "chunk_id": 1922,
+    "question": "What premise do the discussed generative modeling designs share regarding token representation?"
+  },
+  {
+    "arxiv_id": "2610.40649v1",
+    "chunk_id": 1813,
+    "question": "Does perturbing only the output logits in PSV produce performance comparable to perturbing the full weight vector across different model scales and tasks?"
+  },
+  {
+    "arxiv_id": "2610.40654v1",
+    "chunk_id": 1520,
+    "question": "What limitation arises when a privacy test examines the entire dataset and fails if the dataset is close to a single violation, even if all other records are typical?"
+  },
+  {
+    "arxiv_id": "2610.40655v1",
+    "chunk_id": 4280,
+    "question": "What components make up the configuration vector \\(c\\) that defines each synthetic fact‑tracing dataset?"
+  }
+]
